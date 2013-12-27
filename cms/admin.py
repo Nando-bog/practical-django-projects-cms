@@ -1,4 +1,4 @@
-#coding=utf-8
+# coding=utf-8
 # Code for the FlatPage CKEditortaken from https://gist.github.com/elidickinson/1379652
 
 from django.contrib import admin
