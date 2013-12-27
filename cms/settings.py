@@ -58,6 +58,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
 )
 
 ROOT_URLCONF = 'cms.urls'
@@ -97,6 +98,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
@@ -109,6 +112,20 @@ TEMPLATE_DIRS = (
     (os.path.join(BASE_DIR, 'templates')),
     )
 
-CKEDITOR_UPLOAD_PATH = MEDIA_ROOT
+CKEDITOR_UPLOAD_PATH = 'ck-uploads'
 
+#DJANGO CKEDITOR CONFIGURATION
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [
+                ['Format', 'Font', 'FontSize', 'Undo', 'Redo','-', 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript','Superscript','-', 'TextColor', 'BGColor', '-','RemoveFormat' '-', 'Link', 'Unlink','-'],
+                ['Source', '-', 'HorizontalRule','-', 'Table','-', 'BulletedList', 'NumberedList','-', 'PasteText','PasteFromWord','-', 'Image', 'SpecialChar',
+                ]
+            ],
+    }
+}
+
+CKEDITOR_SLUGIFY_FILENAME=False
+
+#FLATPAGES CONFIGURATION
 SITE_ID = 1
