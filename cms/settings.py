@@ -42,6 +42,7 @@ DEFAULT_APPS = (
 
 LOCAL_APPS = (
     'cms',
+    'search',
 )
 
 THIRD_PARTY_APPS =(
@@ -110,6 +111,8 @@ MEDIA_URL = '/files/'
 
 TEMPLATE_DIRS = (
     (os.path.join(BASE_DIR, 'templates')),
+    (os.path.join(BASE_DIR, 'search', 'templates')),
+    
     )
 
 CKEDITOR_UPLOAD_PATH = 'ck-uploads'
