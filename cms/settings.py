@@ -60,6 +60,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'cms.urls'
@@ -117,7 +118,8 @@ TEMPLATE_DIRS = (
 
 CKEDITOR_UPLOAD_PATH = 'ck-uploads'
 
-#DJANGO CKEDITOR CONFIGURATION
+#DJANGO-CKEDITOR CONFIGURATION
+
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': [
@@ -128,7 +130,8 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-CKEDITOR_SLUGIFY_FILENAME=False
+CKEDITOR_SLUGIFY_FILENAME = False
 
 #FLATPAGES CONFIGURATION
+
 SITE_ID = 1

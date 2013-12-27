@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+    <head>
+        <title>The Great Wonderful Site</title>
+    </head>
+    <body>
+	<h1>Pages in this site</h1>
+	<ul>
+	    {% for page in all_pages %}
+		<li><a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
+	    {% endfor %}
+	</ul>
+    </body>
+</html>
