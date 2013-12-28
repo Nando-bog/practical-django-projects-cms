@@ -26,11 +26,12 @@ class FlatPageAdmin(FlatPageAdminOld):
     inlines= [
         KeywordInline,
     ]
- 
- 
+    
 # We have to unregister the normal admin, and then reregister ours
 admin.site.unregister(FlatPage)
 admin.site.register(FlatPage, FlatPageAdmin)
+
+# Registering apps from the Django Projects book
 admin.site.register(SearchKeyword)
 
 ##Inlines for the keyword App

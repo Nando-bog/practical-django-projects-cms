@@ -43,10 +43,12 @@ DEFAULT_APPS = (
 LOCAL_APPS = (
     'cms',
     'search',
+    'coltrane',
 )
 
 THIRD_PARTY_APPS =(
     'ckeditor',
+    'taggit',
 )
 
 INSTALLED_APPS = DEFAULT_APPS + LOCAL_APPS + THIRD_PARTY_APPS
